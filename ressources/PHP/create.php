@@ -1,10 +1,6 @@
 <?php 
 
-$dbtype = 'mysql';
-$host = 'localhost';
-$dbname = 'video_games';
-$dblogin = 'phpmyadmin';
-$dbpass = 'admin';
+require 'config.php';
 
 $jeux = $_POST['jeux'];
 $prix = $_POST['prix'];
@@ -23,7 +19,7 @@ $conn = new PDO($dbtype. ": dbname=".$dbname.";host=".$host, $dblogin, $dbpass);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } else {
-	echo "Connected successfully";
+	echo "Connected successfully<br>";
 }
 
 
