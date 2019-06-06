@@ -42,8 +42,8 @@
                         <input type="text" name="prix" id="prix">
                     </div>
                     <div class="col">
-                        <label for="date" >Date de sortie : </label><br>
-                        <input type="text" name="date" id="date">
+                        <label for="upload" >Date de sortie : </label><br>
+                        <input type="text" name="upload" id="upload">
                     </div>
                     <div class="col">
                         <label for="genre" >Genre :</label><br>
