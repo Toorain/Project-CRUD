@@ -41,6 +41,7 @@
                         <label for="image" >Image : </label><br>
                         <input type="text" name="image" id="image">                        
                     </div>
+                    <!--  -->
                     <div class="col">
                         <label for="prix" >Prix : </label><br>
                         <input type="text" name="prix" id="prix">                        
