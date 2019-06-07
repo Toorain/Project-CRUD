@@ -1,5 +1,4 @@
 <?php 
-
 $jeux = $_POST['jeux'];
 $prix = $_POST['prix'];
 $release = $_POST['release'];
@@ -10,16 +9,7 @@ $connexion = $_POST['connexion'];
 $plateforme = $_POST['plateforme'];
 $description = $_POST['description'];
 
-$dblogin = "phpmyadmin";
-$dbpass = "admin";
-
-try {
-    $conn = new PDO("mysql:host=localhost;dbname=video_games;charset=utf8", $dblogin, $dbpass);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch(PDOException $e) {
-    echo "Connection failed: " . $e->getMessage() . "<br>";
-}
+include 'connection.php';
 
 $sql = $conn->prepare("INSERT INTO vg_general (titre, prix, date_de_sortie, genre, origine, mode, connexion, plateforme, description) VALUES (:jeux,:prix,:release,:genre,:origine,:mode,:connexion, :plateforme, :description)");
 $sql->bindValue(":jeux", $jeux);
@@ -35,10 +25,7 @@ $sql->bindValue(":description", $description);
 $request = $sql->execute();
 
 if ($request === true){
-    echo("Youpi c'est enregistré");
+    header('Location:../../index.php?refresh=ok&test=youpi');
 } else {
     echo "ERROR : ";
 }
-
-
-$conn -> close();
