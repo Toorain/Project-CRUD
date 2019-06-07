@@ -35,10 +35,11 @@
         <form action="ressources/PHP/create.php" method="POST">
             <div class="container-fluid">
                 <?php 
-                if ($_GET['refresh'] && $_GET['test']) {
+                if ($_GET['refresh']) {
                     echo '<div class="alert alert-success" id="success-alert" role="alert">
                         <h4 class="alert-heading">Votre jeu a été ajouté</h4>                    
                         </div>';
+                        header('Location:index.php');
                     }                 
                 ?>
                 <div class="row top-row">

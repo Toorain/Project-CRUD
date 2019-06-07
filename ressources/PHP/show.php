@@ -20,5 +20,5 @@ while ($data = $tab->fetch(PDO::FETCH_ASSOC))
     echo "<td> ".$data['image']." </td>";
     echo "<td> ".$data['plateforme']." </td>";
     echo "<td> ".$data['description']." </td>";
-    echo "</tr>";      
+    echo "</tr>";     
 }
