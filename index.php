@@ -68,12 +68,19 @@
                         <input type="text" name="connexion" id="connexion">
                     </div> 
                     <div class="col">
-                        <label for="plateforme" >Plateforme :</label><br>
-                        <input type="text" name="plateforme" id="plateforme">
+                        <fieldset>
+                            <legend>Plateforme : </legend>
+                            <label for="pc" >PC</label>
+                            <input type="checkbox" name="plateforme[]" id="pc">
+                            <label for="ps4" >PS4</label>
+                            <input type="checkbox" name="plateforme[]" id="ps4">
+                            <label for="xbox" >XBOX 360</label>
+                            <input type="checkbox" name="plateforme[]" id="xbox">
+                        </fieldset>
                     </div>
                     <div class="col">
-                        <label for="comment" >Commentaire :</label><br>
-                        <input type="text" name="comment" id="comment">
+                        <label for="description" >Description :</label><br>
+                        <input type="text" name="description" id="description">
                     </div>                    
                 </div>
                 <div class="row">                    
