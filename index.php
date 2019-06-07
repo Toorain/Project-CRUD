@@ -38,17 +38,21 @@
                         <input type="text" name="jeux" id="jeux">
                     </div>
                     <div class="col">
-                        <label for="prix" >Prix : </label><br>
-                        <input type="text" name="prix" id="prix">
+                        <label for="image" >Image : </label><br>
+                        <input type="text" name="image" id="image">                        
                     </div>
                     <div class="col">
-                        <label for="upload" >Date de sortie : </label><br>
-                        <input type="text" name="upload" id="upload">
+                        <label for="prix" >Prix : </label><br>
+                        <input type="text" name="prix" id="prix">                        
+                    </div>
+                    <div class="col">
+                        <label for="release" >Date de sortie : </label><br>
+                        <input type="text" name="release" id="release">
                     </div>
                     <div class="col">
                         <label for="genre" >Genre :</label><br>
                         <input type="text" name="genre" id="genre">
-                    </div>                   
+                    </div>                  
                 </div>
                 <div class="row">
                     <div class="col">
@@ -64,9 +68,19 @@
                         <input type="text" name="connexion" id="connexion">
                     </div> 
                     <div class="col">
+                        <label for="plateforme" >Plateforme :</label><br>
+                        <input type="text" name="plateforme" id="plateforme">
+                    </div>
+                    <div class="col">
+                        <label for="comment" >Commentaire :</label><br>
+                        <input type="text" name="comment" id="comment">
+                    </div>                    
+                </div>
+                <div class="row">                    
+                    <div class="col buttons-row">
                         <input type="submit" value="Send" id="send" class="btn btn-success">
-                        <input type="reset" value="Reset" id="reset" class="btn btn-secondary">
-                    </div> 
+                        <input type="reset" value="Reset" id="reset" class="btn btn-secondary"> 
+                    </div>
                 </div>
             </div>
         </form>
