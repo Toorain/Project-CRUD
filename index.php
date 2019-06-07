@@ -27,7 +27,9 @@
             </tr>
           </thead>
           <tbody>
-            
+            <?php 
+            include 'ressources/PHP/show.php';
+             ?>
           </tbody>
         </table>
         <form action="ressources/PHP/create.php" method="POST">
@@ -36,10 +38,10 @@
                 if ($_GET['refresh'] && $_GET['test']) {
                     echo '<div class="alert alert-success" id="success-alert" role="alert">
                         <h4 class="alert-heading">Votre jeu a été ajouté</h4>                    
-                    </div>';
-                 }                 
+                        </div>';
+                    }                 
                 ?>
-                <div class="row">
+                <div class="row top-row">
                     <div class="col">
                         <label for="jeux" >Jeux : </label><br>
                         <input type="text" name="jeux" id="jeux">
