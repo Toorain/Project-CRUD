@@ -40,8 +40,8 @@
                         <h4 class="alert-heading">Votre jeu a été ajouté</h4>                    
                         </div>';
                         header('Location:index.php');
-                    }                 
-                ?>
+                    }                                                    
+                ?>                              
                 <div class="row top-row">
                     <div class="col">
                         <label for="jeux" >Jeux : </label><br>
@@ -96,7 +96,7 @@
                 <div class="row">                    
                     <div class="col buttons-row">
                         <input type="submit" value="Send" id="send" class="btn btn-success">
-                        <input type="reset" value="Reset" id="reset" class="btn btn-secondary"> 
+                        <input type="reset" value="Reset" id="reset" class="btn btn-secondary">                          
                     </div>
                 </div>
             </div>

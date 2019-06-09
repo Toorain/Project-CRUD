@@ -20,5 +20,6 @@ while ($data = $tab->fetch(PDO::FETCH_ASSOC))
     echo "<td> ".$data['image']." </td>";
     echo "<td> ".$data['plateforme']." </td>";
     echo "<td> ".$data['description']." </td>";
+    echo "<td><form action=\"ressources/PHP/delete.php\" method=\"POST\"><button type=\"submit\" value=".$data['id']." id=\"delete\" name=\"delete\" class=\"btn btn-danger\">Delete</button></form></td>";
     echo "</tr>";     
 }
