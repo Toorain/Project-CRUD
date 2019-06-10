@@ -8,8 +8,7 @@ $(document).ready (function(){
 
 
 $(document).ready(function() {
-	$('#modify').click(function() {
-		$('#creator').toggle();
-		$('#updator').toggle();
+	$('.modify').click(function() {
+
 	});
 });

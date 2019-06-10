@@ -76,7 +76,8 @@ CREATE TABLE `vg_general` (
   `mode` varchar(255) CHARACTER SET utf8 NOT NULL,
   `connexion` varchar(255) CHARACTER SET utf8 NOT NULL,
   `image` varchar(255) NOT NULL,
-  `plateforme` varchar(255) CHARACTER SET utf8 NOT NULL
+  `plateforme` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `description` varchar(255) CHARACTER SET utf8 NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --

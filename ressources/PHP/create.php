@@ -10,7 +10,7 @@ $sql->bindValue(":genre", $genre);
 $sql->bindValue(":origine", $origine);
 $sql->bindValue(":mode", $mode);
 $sql->bindValue(":connexion", $connexion);
-$sql->bindValue(":plateforme", $plateforme);
+$sql->bindValue(":plateforme", implode("/", $plateforme));
 $sql->bindValue(":description", $description);
 
 $request = $sql->execute();

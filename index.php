@@ -9,8 +9,7 @@
         <link rel="stylesheet" href="ressources/CSS/style.css">
         <link rel="author" href="humans.txt">
     </head>
-    <body>
-        
+    <body>        
         <table class="table">
           <thead class="thead-dark">
             <tr>
@@ -87,11 +86,11 @@
                         <fieldset>
                             <legend>Plateforme : </legend>
                             <label for="pc" >PC</label>
-                            <input type="checkbox" name="plateforme[]" id="pc">
+                            <input type="checkbox" name="plateforme[]" value="PC" id="pc">
                             <label for="ps4" >PS4</label>
-                            <input type="checkbox" name="plateforme[]" id="ps4">
-                            <label for="xbox" >XBOX 360</label>
-                            <input type="checkbox" name="plateforme[]" id="xbox">
+                            <input type="checkbox" name="plateforme[]" value="PS4" id="ps4">
+                            <label for="xbox" >XBOX ONE</label>
+                            <input type="checkbox" name="plateforme[]" value="XBOX ONE" id="xbox">
                         </fieldset>
                     </div>
                     <div class="col">
@@ -151,7 +150,7 @@
                             <input type="checkbox" name="plateforme[]" id="pc">
                             <label for="ps4" >PS4</label>
                             <input type="checkbox" name="plateforme[]" id="ps4">
-                            <label for="xbox" >XBOX 360</label>
+                            <label for="xbox" >XBOX ONE</label>
                             <input type="checkbox" name="plateforme[]" id="xbox">
                         </fieldset>
                     </div>
