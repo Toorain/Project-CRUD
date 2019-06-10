@@ -6,10 +6,3 @@ $(document).ready (function(){
 
 //Display ou non du modal create ou delete
 
-
-$(document).ready(function() {
-	$('.modify').click(function() {
-		$('#creator').toggle();
-		$('#updator').toggle();
-	});
-});
