@@ -33,9 +33,11 @@
              ?>
           </tbody>
         </table>
-        <form id="creator" action="ressources/PHP/create.php" method="POST">
+    
+        <form id="creator" action="ressources/PHP/create.php" method="POST" <?php if (isset($_GET['action']) && $_GET['action'] == "update") { ?> style="display:none;" <?php } else { ?>style="display:block;" <?php }?>>
             <div class="container-fluid">
-                <?php 
+                <?php
+                if (isset($_GET['refresh'])) { 
                 if ($_GET['refresh'] === 'ok') {                    
                     echo '<div class="alert alert-success" id="success-alert" role="alert">
                         <h4 class="alert-heading">Votre jeu a été ajouté</h4>                    
@@ -45,7 +47,7 @@
                         <h4 class="alert-heading">Votre jeu a été supprimé</h4>                    
                         </div>';   
                     }  
-
+                }
                 ?>                              
                 <div class="row top-row">
                     <div class="col">
@@ -86,11 +88,19 @@
                         <fieldset>
                             <legend>Plateforme : </legend>
                             <label for="pc" >PC</label>
+<<<<<<< refs/remotes/origin/Maxence
                             <input type="checkbox" name="plateforme[]" value="PC" id="pc">
                             <label for="ps4" >PS4</label>
                             <input type="checkbox" name="plateforme[]" value="PS4" id="ps4">
                             <label for="xbox" >XBOX ONE</label>
                             <input type="checkbox" name="plateforme[]" value="XBOX ONE" id="xbox">
+=======
+                            <input type="checkbox" name="plateforme[]" id="pc" value="PC">
+                            <label for="ps4" >PS4</label>
+                            <input type="checkbox" name="plateforme[]" id="ps4" value="PS4">
+                            <label for="xbox" >XBOX 360</label>
+                            <input type="checkbox" name="plateforme[]" id="xbox" value="XBOX ONE">
+>>>>>>> Update and other
                         </fieldset>
                     </div>
                     <div class="col">
@@ -106,7 +116,7 @@
                 </div>
             </div>
         </form>
-        <form id="updator" action="ressources/PHP/update.php" method="POST">
+        <form id="updator" action="ressources/PHP/update.php" method="POST" <?php if (isset($_GET['action']) && $_GET['action'] == "update") { ?>style="display:block"<?php } else { ?>style="display:none" <?php }?>>
             <div class="container-fluid">                                           
                 <div class="row top-row">
                     <div class="col">
