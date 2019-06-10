@@ -10,3 +10,10 @@
 	z-index: 10;
 }
 
+#updator{
+	display: none;
+}
+
+legend{
+	font-size: 1em;
+}
