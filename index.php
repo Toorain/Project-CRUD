@@ -22,6 +22,8 @@
               <th scope="col">Mode</th>
               <th scope="col">Connexion</th>
               <th scope="col"></th>
+              <th scope="col">Plateforme</th>
+              <th scope="col">Desription</th>
               <th scope="col"></th>
               <th scope="col"></th>
             </tr>
@@ -35,12 +37,16 @@
         <form action="ressources/PHP/create.php" method="POST">
             <div class="container-fluid">
                 <?php 
-                if ($_GET['refresh']) {
+                if ($_GET['refresh'] === 'ok') {
                     echo '<div class="alert alert-success" id="success-alert" role="alert">
                         <h4 class="alert-heading">Votre jeu a été ajouté</h4>                    
                         </div>';
-                        header('Location:index.php');
-                    }                                                    
+                    } elseif ($_GET['delete'] === 'ok') {
+                        echo '<div class="alert alert-danger" id="success-alert" role="alert">
+                        <h4 class="alert-heading">Votre jeu a été supprimé</h4>                    
+                        </div>';   
+                    }  
+
                 ?>                              
                 <div class="row top-row">
                     <div class="col">
