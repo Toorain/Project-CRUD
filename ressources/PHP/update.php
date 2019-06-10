@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/Maxence
 include 'connection.php';
 /*
@@ -18,6 +19,8 @@ $request = $sql->fetchAll(PDO::FETCH_ASSOC);
 print_r($request);
 
 =======
+=======
+>>>>>>> master
 /*
  * UPDATE.PHP FILE
  */
@@ -39,5 +42,9 @@ if (!empty($_POST['modify'])) {
 	var_dump($request);
 }
 
+<<<<<<< HEAD
 //header('Location:../../index.php?update=ok');
 >>>>>>> Update and other
+=======
+//header('Location:../../index.php?update=ok');
+>>>>>>> master

@@ -9,9 +9,12 @@ $(document).ready (function(){
 
 $(document).ready(function() {
 	$('.modify').click(function() {
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/Maxence
 
 =======
+=======
+>>>>>>> master
 		$('#creator').toggle();
 		$('#updator').toggle();
 >>>>>>> Update and other

@@ -88,6 +88,7 @@
                         <fieldset>
                             <legend>Plateforme : </legend>
                             <label for="pc" >PC</label>
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/Maxence
                             <input type="checkbox" name="plateforme[]" value="PC" id="pc">
                             <label for="ps4" >PS4</label>
@@ -101,6 +102,13 @@
                             <label for="xbox" >XBOX 360</label>
                             <input type="checkbox" name="plateforme[]" id="xbox" value="XBOX ONE">
 >>>>>>> Update and other
+=======
+                            <input type="checkbox" name="plateforme[]" id="pc" value="PC">
+                            <label for="ps4" >PS4</label>
+                            <input type="checkbox" name="plateforme[]" id="ps4" value="PS4">
+                            <label for="xbox" >XBOX 360</label>
+                            <input type="checkbox" name="plateforme[]" id="xbox" value="XBOX ONE">
+>>>>>>> master
                         </fieldset>
                     </div>
                     <div class="col">
