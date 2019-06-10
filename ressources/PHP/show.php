@@ -1,6 +1,7 @@
 <?php 
 
 include 'prepare.php';
+include 'update.php';
 
 // On recupere tout le contenu de la table 
 $tab = $conn->query('SELECT * FROM vg_general');
@@ -21,6 +22,6 @@ while ($data = $tab->fetch(PDO::FETCH_ASSOC))
     echo "<td> ".$data['plateforme']." </td>";
     echo "<td> ".$data['description']." </td>";
     echo "<td><form action=\"ressources/PHP/delete.php\" method=\"POST\"><button type=\"submit\" value=".$data['id']." id=\"delete\" name=\"delete\" class=\"btn btn-danger\">Delete</button></form></td>";
-    echo "<td><button type=\"submit\" value=".$data['id']." id=\"modify\" name=\"modify\" class=\"btn btn-warning\">Modify</button></form></td>";
+    echo "<td><form action=\"index.php?action=update\" method=\"POST\"><button type=\"submit\" value=".$data['id']." id=\"modify\" name=\"modify\" class=\"btn btn-warning modify\">Modify</button></form></td>";
     echo "</tr>";     
 }
