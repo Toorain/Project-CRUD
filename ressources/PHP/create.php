@@ -1,6 +1,9 @@
 <?php 
 
+
+include 'connection.php';
 include 'prepare.php';
+
 
 $sql = $conn->prepare("INSERT INTO vg_general (titre, prix, date_de_sortie, genre, origine, mode, connexion, plateforme, description) VALUES (:jeux,:prix,:release,:genre,:origine,:mode,:connexion, :plateforme, :description)");
 $sql->bindValue(":jeux", $jeux);

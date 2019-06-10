@@ -103,7 +103,7 @@
                 </div>
                 <div class="row">                    
                     <div class="col buttons-row">
-                        <input type="submit" value="Send" id="send" class="btn btn-success">
+                        <input type="submit" name="btn-send" value="Send" id="send" class="btn btn-success">
                         <input type="reset" value="Reset" id="reset" class="btn btn-secondary">                          
                     </div>
                 </div>
