@@ -1,0 +1,19 @@
+.buttons-row{
+	margin-top: 20px;
+}
+
+.alert-heading{
+	text-align: center;
+}
+
+#success-alert{
+	z-index: 10;
+}
+
+#updator{
+	display: none;
+}
+
+legend{
+	font-size: 1em;
+}
