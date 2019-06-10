@@ -1,7 +1,7 @@
 <?php 
 
-$dblogin = "root";
-$dbpass = "";
+$dblogin = "phpmyadmin";
+$dbpass = "admin";
 
 try {
     $conn = new PDO("mysql:host=localhost;dbname=video_games;charset=utf8", $dblogin, $dbpass);
