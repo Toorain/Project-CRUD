@@ -9,7 +9,8 @@
         <link rel="stylesheet" href="ressources/CSS/style.css">
         <link rel="author" href="humans.txt">
     </head>
-    <body>        
+    <body>
+        
         <table class="table">
           <thead class="thead-dark">
             <tr>
@@ -88,27 +89,11 @@
                         <fieldset>
                             <legend>Plateforme : </legend>
                             <label for="pc" >PC</label>
-<<<<<<< HEAD
-<<<<<<< refs/remotes/origin/Maxence
-                            <input type="checkbox" name="plateforme[]" value="PC" id="pc">
-                            <label for="ps4" >PS4</label>
-                            <input type="checkbox" name="plateforme[]" value="PS4" id="ps4">
-                            <label for="xbox" >XBOX ONE</label>
-                            <input type="checkbox" name="plateforme[]" value="XBOX ONE" id="xbox">
-=======
                             <input type="checkbox" name="plateforme[]" id="pc" value="PC">
                             <label for="ps4" >PS4</label>
                             <input type="checkbox" name="plateforme[]" id="ps4" value="PS4">
                             <label for="xbox" >XBOX 360</label>
                             <input type="checkbox" name="plateforme[]" id="xbox" value="XBOX ONE">
->>>>>>> Update and other
-=======
-                            <input type="checkbox" name="plateforme[]" id="pc" value="PC">
-                            <label for="ps4" >PS4</label>
-                            <input type="checkbox" name="plateforme[]" id="ps4" value="PS4">
-                            <label for="xbox" >XBOX 360</label>
-                            <input type="checkbox" name="plateforme[]" id="xbox" value="XBOX ONE">
->>>>>>> master
                         </fieldset>
                     </div>
                     <div class="col">
@@ -168,7 +153,7 @@
                             <input type="checkbox" name="plateforme[]" id="pc">
                             <label for="ps4" >PS4</label>
                             <input type="checkbox" name="plateforme[]" id="ps4">
-                            <label for="xbox" >XBOX ONE</label>
+                            <label for="xbox" >XBOX 360</label>
                             <input type="checkbox" name="plateforme[]" id="xbox">
                         </fieldset>
                     </div>
@@ -180,7 +165,8 @@
                 <div class="row">                    
                     <div class="col buttons-row">
                         <input type="submit" value="Update" id="update" class="btn btn-warning">
-                        <input type="reset" value="Reset" id="reset" class="btn btn-secondary">                          
+                        <input type="reset" value="Reset" id="reset" class="btn btn-secondary">
+                        <a href="index.php" class="btn btn-success">Back</a>                          
                     </div>
                 </div>
             </div>
