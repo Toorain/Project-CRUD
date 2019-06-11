@@ -112,52 +112,52 @@
                 <div class="row top-row">
                     <div class="col">
                         <label for="jeux" >Jeux (UPDATE): </label><br>
-                        <input type="text" name="jeux" id="jeux">
+                        <input type="text" name="jeux" id="jeux" value="<?php echo($requestUpdate[0]['titre']) ?>">
                     </div>
                     <div class="col">
                         <label for="image" >Image (UPDATE): </label><br>
-                        <input type="text" name="image" id="image">                        
+                        <input type="text" name="image" id="image" value="<?php echo($requestUpdate[0]['image']) ?>">                        
                     </div>
                     <div class="col">
                         <label for="prix" >Prix (UPDATE): </label><br>
-                        <input type="text" name="prix" id="prix">                        
+                        <input type="text" name="prix" id="prix" value="<?php echo($requestUpdate[0]['prix']) ?>">                        
                     </div>
                     <div class="col">
                         <label for="release" >Date de sortie (UPDATE): </label><br>
-                        <input type="text" name="release" id="release">
+                        <input type="text" name="release" id="release" value="<?php echo($requestUpdate[0]['date_de_sortie']) ?>">
                     </div>
                     <div class="col">
                         <label for="genre" >Genre (UPDATE):</label><br>
-                        <input type="text" name="genre" id="genre">
+                        <input type="text" name="genre" id="genre" value="<?php echo($requestUpdate[0]['genre']) ?>">
                     </div>                  
                 </div>
                 <div class="row">
                     <div class="col">
                         <label for="origine" >Origine (UPDATE):</label><br>
-                        <input type="text" name="origine" id="origine">
+                        <input type="text" name="origine" id="origine" value="<?php echo($requestUpdate[0]['origine']) ?>">
                     </div>
                     <div class="col">
                         <label for="mode" >Mode (UPDATE):</label><br>
-                        <input type="text" name="mode" id="mode">
+                        <input type="text" name="mode" id="mode" value="<?php echo($requestUpdate[0]['mode']) ?>">
                     </div> 
                     <div class="col">
                         <label for="connexion" >Connexion (UPDATE):</label><br>
-                        <input type="text" name="connexion" id="connexion">
+                        <input type="text" name="connexion" id="connexion" value="<?php echo($requestUpdate[0]['connexion']) ?>">
                     </div> 
                     <div class="col">
                         <fieldset>
                             <legend>Plateforme (UPDATE): </legend>
                             <label for="pc" >PC</label>
-                            <input type="checkbox" name="plateforme[]" id="pc">
+                            <input type="checkbox" name="plateforme[]" id="pc" value="PC" <?php if (strpos($requestUpdate[0]['plateforme'], "PC") !== false) { ?> checked <?php } ?>>
                             <label for="ps4" >PS4</label>
-                            <input type="checkbox" name="plateforme[]" id="ps4">
-                            <label for="xbox" >XBOX 360</label>
-                            <input type="checkbox" name="plateforme[]" id="xbox">
+                            <input type="checkbox" name="plateforme[]" id="ps4" value="PS4" <?php if (strpos($requestUpdate[0]['plateforme'], "PS4") !== false) { ?> checked <?php } ?>>
+                            <label for="xbox" >XBOX ONE</label>
+                            <input type="checkbox" name="plateforme[]" id="xbox" value="XBOX ONE" <?php if (strpos($requestUpdate[0]['plateforme'], "XBOX ONE") !== false) { ?> checked <?php } ?>>
                         </fieldset>
                     </div>
                     <div class="col">
                         <label for="description" >Description (UPDATE):</label><br>
-                        <input type="text" name="description" id="description">
+                        <input type="text" name="description" id="description" value="<?php echo($requestUpdate[0]['description']) ?>">
                     </div>                    
                 </div>
                 <div class="row">                    

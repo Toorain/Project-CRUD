@@ -1,11 +1,8 @@
 <?php
-
 /*
  * UPDATE.PHP FILE
  */
-
 include 'prepare.php';
-
 /*
  * Requete SQL pour récupérer toutes les infos d'un jeu avec son ID
  */
@@ -16,9 +13,11 @@ if (!empty($_POST['modify'])) {
 		WHERE id = :id'
 	);
 	$sql->execute(array(':id' => $_POST['modify']));
-	$request = $sql->fetchAll(PDO::FETCH_ASSOC);
+	$requestUpdate = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-	var_dump($request);
+
+
+	print_r($request);
 }
 
 //header('Location:../../index.php?update=ok');
