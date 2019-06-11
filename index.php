@@ -29,9 +29,7 @@
             </tr>
           </thead>
           <tbody>
-            <?php 
-            include 'ressources/PHP/show.php';
-             ?>
+            <?php include('ressources/PHP/show.php'); ?>
           </tbody>
         </table>
     
