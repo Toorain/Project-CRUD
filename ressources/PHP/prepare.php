@@ -3,7 +3,7 @@
  * PREPARE.PHP FILE
  */
 if (isset($_POST['btn-send'])) {
-    if (!empty($_POST) && $_POST['btn-send'] == "Send") { 
+    if (!empty($_POST) && ($_POST['btn-send'] == "Send" || $_POST['btn-send'] == "Update")) { 
         $jeux = $_POST['jeux'];
         $prix = $_POST['prix'];
         $release = $_POST['release'];
