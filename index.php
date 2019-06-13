@@ -35,6 +35,7 @@
 <form id="creator" action="ressources/PHP/create.php" method="POST" <?php if (isset($_GET['action']) && $_GET['action'] == "update") { ?> style="display:none;" <?php } else { ?>style="display:block;" <?php }?>>
     <div class="container-fluid">
         <?php
+          if ($_GET) {         
             switch ($_GET['update']) {
                 case 'refresh':
                     echo '<div class="alert alert-success" id="success-alert" role="alert">
@@ -54,6 +55,7 @@
                     </div>';
                     break;   
             }
+          }
         ?>                              
         <div class="row top-row">
             <div class="col">
