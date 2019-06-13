@@ -10,10 +10,23 @@
 	z-index: 10;
 }
 
-#updator{
+/*#updator{
 	display: none;
-}
+}*/
 
 legend{
 	font-size: 1em;
+}
+
+.modal-dialog {
+	height: auto;
+  width: 100%;
+}
+
+.modal-content {
+  border-radius: 0;
+}
+
+#addTitle, #modifyTitle{
+	font-weight: bold;
 }

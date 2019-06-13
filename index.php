@@ -28,27 +28,19 @@
           <th scope="col"></th>
           <th scope="col"></th>
       </tr>
-  </thead>
-  <tbody>
-    <?php include('ressources/PHP/show.php'); ?>
-</tbody>
-</table>
+    </thead>
+    <tbody>
+      <?php 
+        include('ressources/PHP/show.php');
+        //include('ressources/PHP/update.php'); 
+      ?>
+    </tbody>
+  </table>
 
-<form id="creator" action="ressources/PHP/create.php" method="POST" <?php if (isset($_GET['action']) && $_GET['action'] == "update") { ?> style="display:none;" <?php } else { ?>style="display:block;" <?php }?>>
-    <div class="container-fluid">
-        <?php
-            switch ($_GET['update']) {
-                case 'refresh':
-                    echo '<div class="alert alert-success" id="success-alert" role="alert">
-                    <h4 class="alert-heading">Votre jeu a été ajouté</h4>                    
-                    </div>';
-                    break;
-                
-                case 'delete':
-                    echo '<div class="alert alert-danger" id="danger-alert" role="alert">
-                    <h4 class="alert-heading">Votre jeu a été supprimé</h4>                    
-                    </div>'; 
-                    break;
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addModal">
+    ADD +
+  </button>
 
                 case 'empty':
                     echo '<div class="alert alert-secondary" id="empty-alert" role="alert">
@@ -101,7 +93,13 @@
                     <input type="checkbox" name="plateforme[]" id="ps4" value="PS4">
                     <label for="xbox" >XBOX ONE</label>
                     <input type="checkbox" name="plateforme[]" id="xbox" value="XBOX ONE">
-                </fieldset>
+                  </fieldset>
+                </div>
+                <div class="col">
+                  <label for="description" >Description :</label><br>
+                  <textarea type="text" name="description" id="description" required rows="5" cols="50"></textarea>
+                </div> 
+              </div>
             </div>
             <div class="col">
                 <label for="description" >Description :</label><br>
@@ -113,22 +111,38 @@
                 <input type="submit" name="btn-send" value="Send" id="send" class="btn btn-success">
                 <input type="reset" value="Reset" id="reset" class="btn btn-secondary">                          
             </div>
-        </div>
+          </form>
+        </div>      
+      </div>
     </div>
-</form>
-<form id="updator" action="ressources/PHP/update.php" method="POST" <?php if (isset($_GET['action']) && $_GET['action'] == "update") { ?>style="display:block"<?php } else { ?>style="display:none" <?php }?>>
-    <input type="hidden" name="jeux_id" value="<?php echo($requestUpdate[0]['id']) ?>">
-    <div class="container-fluid">                                          
-        <div class="row top-row">
-            <div class="col">
+  </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="modifyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modifyTitle">Update Title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="updator" action="" method="POST">
+          <?php echo($varTest); ?>
+          <input type="hidden" name="jeux_id" value="<?php if(isset($requestUpdate[0])) echo($requestUpdate[0]['id']) ?>">
+          <div class="container-fluid">                                          
+            <div class="row top-row">
+              <div class="col">
                 <label for="jeux" >Jeux (UPDATE): </label><br>
                 <input required type="text" name="jeux" id="jeux" value="<?php echo($requestUpdate[0]['titre']) ?>">
             </div>
             <div class="col">
                 <label for="image" >Image (UPDATE): </label><br>
-                <input type="text" name="image" id="image" value="<?php echo($requestUpdate[0]['image']) ?>">                        
-            </div>
-            <div class="col">
+                <input type="text" name="image" id="image" value="<?php if(isset($requestUpdate[0])) echo($requestUpdate[0]['image']) ?>">                        
+              </div>
+              <div class="col">
                 <label for="prix" >Prix (UPDATE): </label><br>
                 <input required type="text" name="prix" id="prix" value="<?php echo($requestUpdate[0]['prix']) ?>">                        
             </div>
@@ -136,7 +150,8 @@
                 <label for="release" >Date de sortie (UPDATE): </label><br>
                 <input required type="text" name="release" id="release" value="<?php echo($requestUpdate[0]['date_de_sortie']) ?>">
             </div>
-            <div class="col">
+            <div class="row">
+              <div class="col">
                 <label for="genre" >Genre (UPDATE):</label><br>
                 <input required type="text" name="genre" id="genre" value="<?php echo($requestUpdate[0]['genre']) ?>">
             </div>                  
@@ -156,16 +171,16 @@
             </div> 
             <div class="col">
                 <fieldset>
-                    <legend>Plateforme (UPDATE): </legend>
-                    <label for="pc" >PC</label>
-                    <input type="checkbox" name="plateforme[]" id="pc" value="PC" <?php if (strpos($requestUpdate[0]['plateforme'], "PC") !== false) { ?> checked <?php } ?>>
-                    <label for="ps4" >PS4</label>
-                    <input type="checkbox" name="plateforme[]" id="ps4" value="PS4" <?php if (strpos($requestUpdate[0]['plateforme'], "PS4") !== false) { ?> checked <?php } ?>>
-                    <label for="xbox" >XBOX ONE</label>
-                    <input type="checkbox" name="plateforme[]" id="xbox" value="XBOX ONE" <?php if (strpos($requestUpdate[0]['plateforme'], "XBOX ONE") !== false) { ?> checked <?php } ?>>
+                  <legend>Plateforme (UPDATE): </legend>
+                  <label for="pc" >PC</label>
+                  <input type="checkbox" name="plateforme[]" id="pc" value="PC" <?php if (strpos($requestUpdate[0]['plateforme'], "PC") !== false) { ?> checked <?php } ?>>
+                  <label for="ps4" >PS4</label>
+                  <input type="checkbox" name="plateforme[]" id="ps4" value="PS4" <?php if (strpos($requestUpdate[0]['plateforme'], "PS4") !== false) { ?> checked <?php } ?>>
+                  <label for="xbox" >XBOX ONE</label>
+                  <input type="checkbox" name="plateforme[]" id="xbox" value="XBOX ONE" <?php if (strpos($requestUpdate[0]['plateforme'], "XBOX ONE") !== false) { ?> checked <?php } ?>>
                 </fieldset>
-            </div>
-            <div class="col">
+              </div>
+              <div class="col">
                 <label for="description" >Description (UPDATE):</label><br>
                 <input required type="text" name="description" id="description" value="<?php echo($requestUpdate[0]['description']) ?>">
             </div>                    
@@ -176,7 +191,14 @@
                 <input type="reset" value="Reset" id="reset" class="btn btn-secondary">
                 <a href="index.php" class="btn btn-success">Back</a>                          
             </div>
-        </div>
+            <div class="modal-footer">
+              <a href="index.php" class="btn btn-success">Back</a>
+              <input type="reset" value="Reset" id="reset" class="btn btn-secondary"> 
+              <input type="submit" name="btn-send" value="Update" id="update" class="btn btn-warning">
+            </div>
+          </div>
+        </form> 
+      </div>      
     </div>
 </form> 
 
